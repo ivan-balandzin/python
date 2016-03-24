@@ -1,5 +1,5 @@
 lkey=['a','b','c','d']
-lval=[1,2,3]
+lval=[1,2,3,4,5]
 
 def fdict(lkey,lval):
     if len(lkey)>len(lval):
@@ -7,6 +7,6 @@ def fdict(lkey,lval):
             lval.append(None)
     else:
         lval=lval[0:len(lkey)]
-    return {key:value for key,value in zip(lkey, lval)}
+    return {key:value for key,value in zip(lkey, lval).sort()}
 
 print (fdict(lkey,lval))

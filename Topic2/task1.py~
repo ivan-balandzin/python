@@ -7,6 +7,6 @@ def fdict(lkey,lval):
             lval.append(None)
     else:
         lval=lval[0:len(lkey)]
-    return {key:value for key,value in zip(lkey, lval)}
+    return {key:value for key,value in zip(lkey, lval).sort()}
 
-print (fdict(lkey,lval))
+print (fdict(lkey,lval).sort())
